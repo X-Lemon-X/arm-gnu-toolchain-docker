@@ -27,4 +27,4 @@ The GNU Arm Embedded Toolchain is a ready-to-use, open-source suite of tools for
 The most straightforward way to use this image is to use a gcc container as both the build and runtime environment.
 ```bash
   docker run --rm xlemonx/arm-gnu-toolchain:latest -v .:/myapp
-```arm-gcc
+```
