@@ -22,7 +22,7 @@ The GNU Arm Embedded Toolchain is a ready-to-use, open-source suite of tools for
 
 ## How to use this image
 
-### Start a dcoeker container and attach to it
+### Start a docker container and attach to it
 
 The most straightforward way to use this image is to use a gcc container as both the build and runtime environment.
 ```bash
