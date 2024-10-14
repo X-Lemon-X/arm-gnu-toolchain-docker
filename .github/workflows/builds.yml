@@ -1,25 +1,27 @@
-# name: Build
+name: Build and Push Docker Image
 
-# on:
-#   push:
-#     branches:
-#       - main
-#   pull_request:
-#     branches:
-#       - main
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
-# jobs:
-#   # build:
-#   #   runs-on: self-hosted
-#   #   steps:
-#   #     - uses: actions/checkout@v4
+jobs:
+  build-and-push:
+    runs-on: ubuntu-latest
 
-#   #     - name: Configure CMake
-#   #       run: cmake -B build
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-#   #     - name: Build project
-#   #       run: cmake --build build 
+      - name: Log in to Docker Hub
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
 
-#   #     - name: Save binary file
-#   #       run: cp build/firmware.bin ${{ github.workspace }}/firmware.bin
+      - name: Build Docker image
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/arm-gnu-toolchain:latest .
+
+      - name: Push Docker image
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/arm-gnu-toolchain:latest
 
