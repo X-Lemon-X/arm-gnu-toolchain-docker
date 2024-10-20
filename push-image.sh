@@ -1,4 +1,4 @@
-username=xlemonx
+username=$1
 docker tag $username/arm-gnu-toolchain:13.3.1 $username/arm-gnu-toolchain:latest
 docker push $username/arm-gnu-toolchain:latest
 docker push $username/arm-gnu-toolchain:13.3.1
