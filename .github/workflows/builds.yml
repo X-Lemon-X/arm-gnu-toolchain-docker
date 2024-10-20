@@ -20,8 +20,8 @@ jobs:
         run: docker login -u "${{ secrets.DOCKER_USERNAME }}" -p "${{ secrets.DOCKER_PASSWORD }}"
 
       - name: Build Docker image
-        run: build-docker-image.sh ${{ secrets.DOCKER_USERNAME }}
+        run: ./build-docker-image.sh ${{ secrets.DOCKER_USERNAME }}
 
       - name: Push Docker image
-        run: push-image.sh ${{ secrets.DOCKER_USERNAME }}
+        run: ./push-image.sh ${{ secrets.DOCKER_USERNAME }}
 
