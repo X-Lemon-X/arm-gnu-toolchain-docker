@@ -7,6 +7,10 @@ Binaries are installed from the official ARM website and are provided as is.
 The repo of the project can be found [here](https://github.com/X-Lemon-X/arm-gnu-toolchain).
 The docker image can be found [here](https://hub.docker.com/r/xlemonx/arm-gnu-toolchain).
 
+| Build Type | Build Status |
+|-|-|
+| Build firmware | [![Build and Push Docker Image](https://github.com/X-Lemon-X/arm-gnu-toolchain/actions/workflows/builds.yml/badge.svg)](https://github.com/X-Lemon-X/arm-gnu-toolchain/actions/workflows/builds.yml) |
+
 ## Supported tags
 
 Bellow is the list with the supported tags as links to the Dockerfile of the version.
