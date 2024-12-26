@@ -3,6 +3,8 @@ FROM ubuntu:22.04
 
 WORKDIR /agt
 
+RUN echo "deb http://archive.ubuntu.com/ubuntu/ jammy main restricted universe multiverse"
+
 # Update the package lists
 RUN apt-get update && apt-get upgrade -y && apt-get install --no-install-recommends -y  
 
