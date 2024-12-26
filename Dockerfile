@@ -14,6 +14,7 @@ RUN apt-get install -y \
   ninja-build \
   build-essential \
   clang-format \
+  clang-tidy \
   python3 \
   python3-pip \
   python3-venv \
