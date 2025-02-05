@@ -15,6 +15,7 @@ The docker image can be found [here](https://hub.docker.com/r/xlemonx/arm-gnu-to
 
 Bellow is the list with the supported tags as links to the Dockerfile of the version.
   * [`latest`]()
+  * [`14.2.1`]() 
   * [`13.3.1`]() 
   * [`12.3.1`]()
   * [`11.3.1`]()
